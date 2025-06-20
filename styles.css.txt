@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #915a72;
+}
+
+header {
+    background-color: #915a72
+    text-align: center;
+    padding: 1em 0;
+}
+
+.profileP {
+    border-radius: 50%; /* Circular image */
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border: 5px solid #C7E1BA; /* White border around the image */
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: block;
+    margin: 0 auto; /* Centers horizontally */
+}
+
+
+.badge {
+    border-radius: 50%; /* Circular image */
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border: 5px solid #C7E1BA; /* White border around the image */
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: block;
+    margin: 0 auto; /* Centers horizontally */
+}
+
+section {
+    padding: 20px;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #397249;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    height: 20px;
+    border-radius: 1px;
+    margin: 2px 0;
+    background-color: #002408;
+    text-align: left;
+    line-height: 20px;
+    transition: width 0.5s;
+}
+
+.animating {
+    background-color: Gray;
+    border: 20px;
+}
+
+.programming {
+    background-color: Gray;
+}
+
+.photoshop {
+    background-color: gray;
+}
+
+.digital-arts {
+    background-color: gray;
+}
+
+
+h2 {
+    border-bottom: 2px solid #4CAF50;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
