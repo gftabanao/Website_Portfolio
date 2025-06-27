@@ -3,95 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Greatchen's Portfolio</title>
+  <title>Graphic Designer Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Login Screen -->
+   <!-- LOGIN SCREEN -->
   <div id="login-screen">
-    <h2>Please Log In</h2>
+    <h2>Login</h2>
     <input type="text" id="username" placeholder="Username" />
     <input type="password" id="password" placeholder="Password" />
     <button onclick="login()">Login</button>
   </div>
 
-  <!-- Portfolio -->
+  <!-- PORTFOLIO CONTENT -->
   <div id="portfolio" style="display: none;">
-    <button id="logoutBtn" onclick="logout()">Log Out</button>
 
-    <header>
-      <h1>Hi I'm Greatchen</h1>
-      <h4>a Diploma in Information Technology at Asian College</h4>
-      <img class="profileP" src="https://uploads.onecompiler.io/43mkybpbw/43mkyhuck/greatchen.jpg" alt="Profile">
-    </header>
+    <!-- Logout Button -->
+    <button id="logoutBtn" onclick="logout()">Logout</button>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I'm a graphic designer. I create visually appealing designs for logos and branding. I combine creativity with technical skills to bring ideas to life online.</p>
-      <h3>Education</h3>
-      <p>A Diploma in Information Technology at Asian College Dumaguete City.</p>
-      <h3>Skills Summary</h3>
-      <p>Video Editing, Graphic Designing (Photopea, Figma, Photoshop)</p>
-    </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Project Title</h3>
-        <p>Description of the project.</p>
-        <p>Tools Used: HTML, CSS, JS</p>
-        <a href="#">Live Demo</a> | <a href="#">Source Code</a>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="section home">
+    <h1>Hi, I'm Greatchen</h1>
+    <p>Creative Graphic Designer specializing in logos, branding, and digital art.</p>
+    <img src="https://uploads.onecompiler.io/43mkybpbw/43mkyhuck/greatchen.jpg" alt="Profile Picture" class="profile-pic" />
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="section about">
+    <h2>About Me</h2>
+    <p>
+      I'm a graphic designer specializing in creating visually appealing designs for logos and branding.
+      I combine creativity with technical skills to bring ideas to life online and in print.
+      With a strong eye for detail and a passion for aesthetics, I craft unique and effective visual solutions
+      that help businesses communicate their identity clearly.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-item">
+        <h3>Logo Design for Startup</h3>
+        <p>A modern and clean logo designed for a tech startup focusing on innovation.</p>
+        <a href="#" target="_blank">View Project</a>
       </div>
-    </section>
-
-    <div class="progress-container">
-      <div class="progress-bar" style="width: 90%;">Animating</div>
-      <div class="progress-bar" style="width: 90%;">Programming</div>
-      <div class="progress-bar" style="width: 90%;">Photoshop</div>
-      <div class="progress-bar" style="width: 90%;">Digital Arts</div>
+      <div class="project-item">
+        <h3>Branding for Cafe</h3>
+        <p>Complete branding package including logo, menu design, and social media graphics.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+      <!-- Add more projects as needed -->
     </div>
+  </section>
 
-    <section id="resume">
-      <h2>Resume</h2>
-      <a href="resume.pdf" download>Download My Resume</a>
-    </section>
+  <!-- Skills Section -->
+  <section id="skills" class="section skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Logo Design</li>
+      <li>Brand Identity</li>
+      <li>Adobe Photoshop</li>
+      <li>Adobe Illustrator</li>
+      <li>Figma & Photopea</li>
+      <li>Digital Illustration</li>
+      <li>Video Editing</li>
+    </ul>
+  </section>
 
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <p>Responsive Web Design - March 30, 2025</p>
-      <img class="badge" src="https://uploads.onecompiler.io/43mkybpbw/43mkyhuck/certificate.PNG" alt="Certification Badge">
-    </section>
+  <!-- Resume Section -->
+  <section id="resume" class="section resume">
+    <h2>Resume</h2>
+    <a href="resume.pdf" download>Download My Resume</a>
+  </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <form id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" required>
+  <!-- Certifications Section -->
+  <section id="certifications" class="section certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Responsive Web Design - March 2025</li>
+      <li>Advanced Photoshop Techniques - Jan 2025</li>
+      <!-- Add more certifications -->
+    </ul>
+  </section>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" required>
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required />
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+      
+      <label for="message">Message:</label>
+      <textarea id="message" rows="5" required></textarea>
+      
+      <button type="submit">Send</button>
+    </form>
+    <p>Email: gftabanao.student@asiancollege.edu.ph</p>
+    <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/yourprofile</a></p>
+    <p>GitHub: <a href="#" target="_blank">github.com/yourusername</a></p>
+  </section>
 
-        <label for="message">Message:</label>
-        <textarea id="message" required></textarea>
-
-        <button type="submit">Send</button>
-      </form>
-      <p>Email: gftabanao.student@asiancollege.edu.ph</p>
-      <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
-      <p>GitHub: <a href="#">Your GitHub</a></p>
-    </section>
-
-    <footer>
-      <p>&copy; 2025 Greatchen Tabanao. All rights reserved.</p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </footer>
-  </div>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Greatchen Tabanao. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
