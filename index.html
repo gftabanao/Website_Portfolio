@@ -1,102 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Greatchen's Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- Login Screen -->
+  <div id="login-screen">
+    <h2>Please Log In</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <!-- Portfolio Section -->
+  <div id="portfolio" style="display: none;">
+    <button id="logoutBtn" onclick="logout()">Log Out</button>
+
     <header>
-        <h1>Hi I'm Greatchen </h1>
-        <h4 class="intro">a Diploma in Information Technology at Asian College</h4>
-        <img class="profileP" src="https://scontent-mnl1-1.xx.fbcdn.net/v/t39.30808-6/474947393_1271875430778553_3013601244250820547_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeED49Y0hVxIwJ12Q_ZXxz83XsZWpYcmQhFexlalhyZCEbM5kxuOasrd7aLPglvJR1nhLkUUjrMwFgPtSciY9fuG&_nc_ohc=d4fv9zcCviMQ7kNvwHqdX_0&_nc_oc=AdnkbS4BDVr3EPUd4jYdvYBON0K58uZ5GJ84VeqyTkebKukppLmbdzAiSs-qCi59bbk&_nc_zt=23&_nc_ht=scontent-mnl1-1.xx&_nc_gid=iQ6bUrPhCqvPhnhd3YFAAg&oh=00_AfOhY3guPGFFdLFx8_wvDB07ztFGYIGQJJnqbwkxsCjmmA&oe=685A60E4" alt="Banner Image">
+      <h1>Hi I'm Greatchen</h1>
+      <h4 class="intro">a Diploma in Information Technology at Asian College</h4>
+      <img class="profileP" src="https://uploads.onecompiler.io/43mkybpbw/43mkyhuck/greatchen.jpg" alt="Profile">
     </header>
 
     <section id="about">
-        <h2 id="aboutMe" >About Me</h2>
-        <p>I'm a graphic designer. I create visually appealing designs for logos, and branding. I combine creativity
-with technical skills to bring ideas to life online.
-.</p>
-        <h3>Education</h3>
-        <p> A Diploma in Information Technology at Asian College Dumaguete City, this typically covered 
-        Fundamentals of Information Technology,
-        Programming Languages (e.g., Python, Java, C++),
-        Web Design and Development.
-        Database Management (e.g., SQL), and
-        Operating Systems.
-
-
-</p>
-       
-        <h3>Skills Summary</h3>
-        <p> Video Editing,
-        Graphic Designing
-          (Photopea, Figma, Photoshop)
-</p>
+      <h2>About Me</h2>
+      <p>I'm a graphic designer. I create visually appealing designs for logos and branding. I combine creativity with technical skills to bring ideas to life online.</p>
+      <h3>Education</h3>
+      <p>A Diploma in Information Technology at Asian College Dumaguete City.</p>
+      <h3>Skills Summary</h3>
+      <p>Video Editing, Graphic Designing (Photopea, Figma, Photoshop)</p>
     </section>
 
     <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project Title</h3>
-            <p>Description of the project.</p>
-            <p>Tools Used: HTML, CSS, JS</p>
-            <a href="live-demo-link">Live Demo</a>
-            <a href="github-link">Source Code</a>
-        </div>
-        <!-- Repeat for more projects -->
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Project Title</h3>
+        <p>Description of the project.</p>
+        <p>Tools Used: HTML, CSS, JS</p>
+        <a href="#">Live Demo</a>
+        <a href="#">Source Code</a>
+      </div>
     </section>
 
-        <div class="progress-container">
-            <div class="progress-bar animating" style="width: 90%;">Animating</div>
-            <div class="progress-bar programming" style="width: 90%;">Programming</div>
-            <div class="progress-bar photoshop" style="width: 90%;">Photoshop</div>
-            <div class="progress-bar digital-arts" style="width: 90%;">Digital Arts</div>
-        </div>
+    <div class="progress-container">
+      <div class="progress-bar animating" style="width: 90%;">Animating</div>
+      <div class="progress-bar programming" style="width: 90%;">Programming</div>
+      <div class="progress-bar photoshop" style="width: 90%;">Photoshop</div>
+      <div class="progress-bar digital-arts" style="width: 90%;">Digital Arts</div>
+    </div>
 
     <section id="resume">
-        <h2>Resume</h2>
-        <a href="resume.pdf" download>Download My Resume</a>
+      <h2>Resume</h2>
+      <a href="resume.pdf" download>Download My Resume</a>
     </section>
 
     <section id="certifications">
-        <h2>Certifications</h2>
-        <p>Responsive Web Design - March 30, 2025</p>
-        <img class="badge" src="https://uploads.onecompiler.io/43mkybpbw/43mkyhuck/certificate.PNG"Certification Badge">
+      <h2>Certifications</h2>
+      <p>Responsive Web Design - March 30, 2025</p>
+      <img class="badge" src="https://uploads.onecompiler.io/43mkybpbw/43mkyhuck/certificate.PNG" alt="Certification Badge">
     </section>
 
     <section id="contact">
-        <h2>Contact </h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Send</button>
-        </form>
-        <p>Email: gftabanao.student@asiancollege.edu.ph</p>
-        <p>LinkedIn: <a href="linkedin-link">Your LinkedIn</a></p>
-        <p>GitHub: <a href="github-link">Your GitHub</a></p>
+      <h2>Contact</h2>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p>Email: gftabanao.student@asiancollege.edu.ph</p>
+      <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
+      <p>GitHub: <a href="#">Your GitHub</a></p>
     </section>
 
     <footer>
-        <p>&copy; 2025 Greatchen Tabanao. All rights reserved.</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#resume">Resume</a>
-            <a href="#contact">Contact</a>
-        </nav>
+      <p>&copy; 2025 Greatchen Tabanao. All rights reserved.</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </footer>
+  </div>
 
-    <script src="script.js"></script>
+  <script>
+    function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (username === "admin" && password === "1234") {
+        document.getElementById('login-screen').style.display = "none";
+        document.getElementById('portfolio').style.display = "block";
+      } else {
+        alert("Incorrect username or password.");
+      }
+    }
+
+    function logout() {
+      document.getElementById('login-screen').style.display = "flex";
+      document.getElementById('portfolio').style.display = "none";
+    }
+
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your message!');
+    });
+  </script>
 </body>
 </html>
