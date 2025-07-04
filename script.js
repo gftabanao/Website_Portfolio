@@ -1,23 +1,48 @@
-function login() {
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
+// Hardcoded credentials (for demo only)
+const validUsername = "admin"
+const validPassword = "123"
 
-  if (username === "admin" && password === "1234") {
-    document.getElementById('login-screen').style.display = "none";
-    document.getElementById('portfolio').style.display = "block";
+// Get DOM elements
+const loginScreen = document.getElementById("login-screen");
+const portfolio = document.getElementById("portfolio");
+
+// Check login state on load
+window.onload = () => {
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  if (isLoggedIn === "true") {
+    showPortfolio();
   } else {
-    alert("Incorrect username or password.");
+    showLogin();
+  }
+};
+
+// Login function
+function login() {
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value;
+
+  if (username === validUsername && password === validPassword) {
+    localStorage.setItem("isLoggedIn", "true");
+    showPortfolio();
+  } else {
+    alert("Invalid username or password!");
   }
 }
 
+// Logout function
 function logout() {
-  document.getElementById('login-screen').style.display = "flex";
-  document.getElementById('portfolio').style.display = "none";
+  localStorage.removeItem("isLoggedIn");
+  showLogin();
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Thank you for your message!');
-  });
-});
+// Show portfolio and hide login
+function showPortfolio() {
+  loginScreen.style.display = "none";
+  portfolio.style.display = "block";
+}
+
+// Show login and hide portfolio
+function showLogin() {
+  loginScreen.style.display = "flex";
+  portfolio.style.display = "none";
+}
